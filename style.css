@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--transparent-white);
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.8;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.cards-container {
+  display: flex;
+  max-width: 740px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 40px;
+}
+
+.card-1 {
+  background-color: var(--bright-orange);
+}
+
+.card-2 {
+  background-color: var(--dark-cyan);
+  border: 1px solid var(--dark-cyan);
+}
+
+.card-3 {
+  background-color: var(--very-dark-cyan);
+}
+
+.card__heading {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", sans-serif;
+  color: var(--very-light-gray);
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.card__paragraph {
+  color: var(--transparent-white);
+  font-size: 12px;
+}
+
+.card__btn {
+  background-color: var(--very-light-gray);
+  font-family: inherit;
+  font-size: 11px;
+  border: none;
+  outline: 2px solid var(--very-light-gray);
+  border-radius: 30px;
+  padding: 10px 25px;
+  margin-top: 60px;
+}
+
+.card__btn:hover {
+  background-color: initial;
+  color: var(--very-light-gray);
+  cursor: pointer;
+}
+
+.card__btn--1 {
+  color: var(--bright-orange);
+  text-shadow: 0px 0px 0.5px var(--bright-orange);
+}
+
+.card__btn--2 {
+  color: var(--dark-cyan);
+  text-shadow: 0px 0px 0.5px var(--dark-cyan);
+}
+
+.card__btn--3 {
+  color: var(--very-dark-cyan);
+  text-shadow: 0px 0px 0.5px var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 375px) {
+  .cards-container {
+    flex-direction: column;
+    width: 70%;
+    margin: 80px auto;
+  }
+  .card__btn {
+    margin-top: 20px;
+  }
+}
